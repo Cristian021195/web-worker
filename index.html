@@ -13,16 +13,28 @@
     <h2>Introduccion</h2>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, vitae voluptate.</p>
     <hr>
-    <fieldset>
-        <legend>Calculadora Fibonnaci</legend>
-        <form>
-            <input type="number" name="num" id="num" min="0" value="0">
-            <button type="button" id="calc">Calcular</button>
-            <input type="range" name="rango" id="rango">
-        </form>        
-        <strong>Resultado: <span id="res"></span></strong>
-    </fieldset>
-    <button id="kill">Matar Worker</button>
+    <div>
+        <fieldset>
+            <legend>Calculadora Fibonnaci</legend>
+            <form>
+                <input type="number" name="num" id="num" min="0" value="0">
+                <button type="button" id="calc">Calcular</button>
+                <input type="range" name="rango" id="rango">
+            </form>        
+            <strong>Resultado: <span id="res"></span></strong>
+        </fieldset>
+        <button id="kill">Matar Worker</button>
+    </div>
+    <div>
+        <fieldset>
+            <legend>Loader</legend>
+            <form id="peticionar">
+                <button type="submit">Peticionar</button>
+            </form>        
+            <strong>Resultado: <span id="res-peticionar"></span></strong>
+        </fieldset>
+        <button id="kill">Matar Worker</button>
+    </div>
     
 </body>
 </html>
