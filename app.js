@@ -37,3 +37,17 @@ $kill.addEventListener('click', ()=>{
     customWorker.terminate();
     customWorker = undefined;
 })
+
+
+if (navigator.serviceWorker){
+    let swLocation = '/web-worker/sw.js';
+    if(window.location.href.includes('localhost')){
+        swLocation = '/sw.js';
+    }
+    navigator.serviceWorker.register( swLocation ).then(res=>console.log('registrado sw'))
+    .catch (error=>{console.log('error al registrar sw')});
+    navigator.serviceWorker.addEventListener("message", (event) => {
+        console.log(event.data.msg, event.data.url);
+    });
+}
+
